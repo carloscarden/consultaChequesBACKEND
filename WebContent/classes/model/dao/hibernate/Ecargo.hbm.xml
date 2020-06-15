@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping 	package="model">	
+	<class name="Ecargo" table="ecargo"	discriminator-value="N">
+	   
+	   	<id name="cidr" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+	             	    
+	    <property name="item"> <column name="item" /> </property>
+        <property name="apart"> <column name="apart" /> </property>
+        <property name="docu"> <column name="docu" not-null="true"/> </property>
+        <property name="secu"> <column name="secu" /> </property>
+        <property name="foja"> <column name="foja" /> </property>
+        <property name="apynom"> <column name="apynom" not-null="true"/> </property>
+        <property name="escue"> <column name="escue" /> </property>
+        <property name="cat"> <column name="cat" /> </property>
+        <many-to-one name="dist" class="model.Distrito" column="dist" not-null="true"/>
+        <property name="cargo"> <column name="cargo" /> </property>         
+                
+    </class>
+</hibernate-mapping>

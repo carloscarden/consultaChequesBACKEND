@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping 	package="model">
+
+	<class name="VEDetalle" table="v_edetalles" discriminator-value="N">
+	    
+        <composite-id>     
+          <key-property name="eliqid" column="eliqid" ></key-property> 
+          <key-property name="codigo" column="codigo" ></key-property>  
+          <key-property name="bod" column="bod" ></key-property>  
+          <key-property name="periodo" column="periodo" ></key-property>  
+        </composite-id> 
+ 
+ 		<property name="origen"> <column name="origen"/> </property>
+		<property name="pesos"> <column name="pesos"/> </property>
+		<property name="per"> <column name="per" not-null="true"/> </property>
+		<property name="descripcioncodigo"> <column name="descripcion_codigo" not-null="true"/> </property>
+
+    </class>
+</hibernate-mapping>

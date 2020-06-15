@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping 	package="model">
+
+	<class name="VEInfoCheq" table="v_einfocheq" discriminator-value="N">
+	    
+        <composite-id>     
+          <key-property name="docu" column="docu" ></key-property> 
+          <key-property name="secu" column="secu" ></key-property>  
+          <key-property name="cidr" column="cidr" ></key-property>  
+          <key-property name="opid" column="opid" ></key-property>  
+          <key-property name="periodo" column="periodo" ></key-property>  
+          <key-property name="liqid" column="liqid" ></key-property>  
+        </composite-id> 
+ 
+ 		<property name="nombrePers"> <column name="nombre_pers" not-null="true"/> </property>
+		<property name="cat"> <column name="cat" not-null="true"/> </property>
+		<property name="descripcionCategoria"> <column name="descripcion_categoria" not-null="true"/> </property>
+		<property name="item"> <column name="item" not-null="true"/> </property>
+		<property name="apart"> <column name="apart" not-null="true"/> </property>
+		<property name="distrito"> <column name="distrito" not-null="true"/> </property>
+		<property name="numero"> <column name="numero" not-null="true"/> </property>
+		<property name="foja"> <column name="foja" not-null="true"/> </property>
+		<property name="cargo"> <column name="cargo" not-null="true"/> </property>
+		<property name="nombreDistrito"> <column name="nombre_distrito" not-null="true"/> </property>
+		<property name="nroCheq"> <column name="nrocheq" not-null="true"/> </property>
+		<property name="antig"> <column name="antig" not-null="true"/> </property>
+    	<property name="emitirCheq"> <column name="emitir_cheq" not-null="true"/> </property>	
+    	<property name="liquido"> <column name="liquido" not-null="true"/> </property>
+    	<property name="observacionesCheque"> <column name="observaciones_cheque" not-null="true"/> </property>
+    	<property name="nombreOpago"> <column name="nombre_opago" not-null="true"/> </property>
+    	<property name="vencimiento"> <column name="vencimiento" not-null="true"/> </property>
+    	<property name="origen"> <column name="origen" not-null="true"/> </property>
+    	<property name="tipoOpago"> <column name="tipo_opago" not-null="true"/> </property>
+    	<property name="cajero"> <column name="cajero" not-null="true"/> </property>
+    	<property name="vigOpago"> <column name="vig_opago" not-null="true"/> </property>
+    	<property name="moneda"> <column name="moneda" not-null="true"/> </property>
+    	<property name="muestra"> <column name="muestra" not-null="true"/> </property>
+    	<property name="caracRevOpago"> <column name="carac_rev_opago" not-null="true"/> </property>
+    	<property name="perOpago"> <column name="per_opago" not-null="true"/> </property>
+    	<property name="opidIps"> <column name="opid_ips" not-null="true"/> </property>
+    	<property name="opidIoma"> <column name="opid_ioma" not-null="true"/> </property>
+    	<property name="fpago"> <column name="fpago" not-null="true"/> </property>
+		
+    </class>
+</hibernate-mapping>

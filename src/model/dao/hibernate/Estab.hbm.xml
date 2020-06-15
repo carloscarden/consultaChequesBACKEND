@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping 	package="model">	
+	<class name="Estab" table="estab"  discriminator-value="N">	    
+	    
+	    <composite-id>     
+          <key-property name="escuid" column="escuid" ></key-property> 
+          <key-property name="vigd" column="vigd" ></key-property>  
+          <key-property name="vigh" column="vigh" ></key-property>  
+        </composite-id> 
+	
+		<many-to-one name="distrito" class="model.Distrito" column="distrito" not-null="true" lazy="false"/>
+        <many-to-one name="dependencia" class="model.Dep" column="dependencia" not-null="true" lazy="false"/>
+        <many-to-one name="tipo_org" class="model.Org" column="tipo_org" not-null="true" lazy="false"/>
+        
+        <property name="numero"> <column name="numero" not-null="true"/> </property>
+        <property name="nombre"> <column name="nombre" /> </property>
+        <property name="rural"> <column name="rural" /> </property>
+        <property name="secciones"> <column name="secciones" /> </property>
+        <property name="turnos"> <column name="turnos" /> </property> 
+        <property name="subvencion"> <column name="subvencion" /> </property>
+        <property name="dob_escol"> <column name="dob_escol" /> </property>
+     
+
+     
+                
+    </class>
+</hibernate-mapping>

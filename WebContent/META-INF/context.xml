@@ -1,0 +1,7 @@
+<Context>
+  <WatchedResource>WEB-INF/web.xml</WatchedResource>
+ 		<ResourceLink 
+       			name="jdbc/consultaChequesV2" 
+       			type="javax.sql.DataSource" global="jdbc/consultaChequesV2"
+       	/>
+</Context>

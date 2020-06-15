@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping 	package="model">	
+	<class name="LogConsultaCheques" table="logConsultaCheques" discriminator-value="N">
+  
+        <id name="id" column="id">
+			<generator class="native"/>
+		</id>
+
+	    <property name="docuConsulta"> <column name="docuConsulta"/> </property>	    	    
+	    <property name="secuConsulta"> <column name="secuConsulta"/> </property>	    
+        <property name="fechaConsulta"> <column name="fechaConsulta"/> </property>
+        <property name="ejercicioConsulta"> <column name="ejercicioConsulta"/> </property>
+        <property name="usuario"> <column name="usuario"/> </property>
+        
+        
+    </class>
+</hibernate-mapping>

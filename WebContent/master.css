@@ -1,0 +1,192 @@
+body {
+	height: 0px;
+	width: 0px;
+	margin: 0px;
+	padding: 0px;
+	background-image: url(images/fondo.gif);
+	}
+
+h1 { 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 14px; 
+	font-weight: bold; 
+	color: #666666; 
+	margin: 0px 0px 10px;
+	}
+h2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #28417A;
+	margin: 5px 0px 0px 50px;
+	text-align: left;
+    }
+h3 { 
+    font: bold 16px Verdana, Arial, Helvetica, sans-serif;	
+	color: #666666;
+	}
+h4 {
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	font-weight: bold; 
+	color: #28417A
+	}
+
+
+.tabla1{
+	font-family: Arial, Helvetica, sans-serif;
+	border-right: 1px solid #28417A;
+	border-bottom: 1px solid #28417A;
+
+	}
+.tabla2{
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #28417A;
+	}
+.tabla3{
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px groove #FFFFFF;
+	background: #006699;
+	padding: 5px;
+	}
+.tablaencabezado {
+	background: #0F238C;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+.tablaencabezado2 {
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+
+
+.tablafondo {
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	background: #EAEDF6;
+	margin-right: auto;
+	margin-left: auto;
+}
+th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #28417A;
+	background-color: #DAE1FB;
+	text-align: center;
+	height: 25px;
+	border-top: 1px solid #28417A;
+	border-left: 1px solid #28417A;
+	padding: 1px;
+}
+.th1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #3758A6;
+	background-color: #DAE1FB;
+	text-align: center;
+	height: 25px;
+	border-left: 1px solid #28417A;
+	padding: 1px;
+}
+.th2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #28417A;
+	background-color: #DAE1FB;
+	text-align: center;
+	height: 25px;
+	border-top: 1px solid #28417A;
+	border-left: 1px solid #28417A;
+	padding: 1px;
+}
+
+
+.td1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	padding: 2px;
+	height: 20px;
+	width: 0px;
+	margin: 0px;
+	border-top: 1px solid #28417A;
+	border-left: 1px solid #28417A;
+	background: #FFFFFF;
+	border-bottom: 1px solid #F7F7F7;
+}
+.td2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 2px;
+	font-weight: normal;
+	padding: 1px;
+	height: 2px;
+	width: 0px;
+	margin: 0px;
+	border-top: 1px solid #28417A;
+	border-left: 1px solid #28417A;
+}
+.td3 {
+	font: bold 12px Verdana, Arial, Helvetica, sans-serif;
+	color: #003399;
+	background: #C9D3F8;
+	text-align: center;
+	vertical-align: middle;
+}
+.td4 {
+	padding: 1px;
+	height: 2px;
+	width: 0px;
+	margin: 0px;
+	border-top: 1px solid #28417A;
+}
+.td5 {
+	padding: 1px;
+	height: 2px;
+	width: 0px;
+	margin: 0px;
+	border-top: 1px solid #28417A;
+}
+
+.tdtit1 {
+	background: #607EF3;
+	border-bottom: 1px solid #28417A;
+	border-right: 1px solid #28417A;
+	height: 30px;
+}
+.tdtit2 {
+	font: bold 12px Verdana, Arial, Helvetica, sans-serif;
+	color: #28417A;
+	background: #C9D3F8;
+	border-bottom: 1px solid #28417A;
+	text-indent: 10px;
+	height: 30px;
+}
+.tit {
+	font: bold 18px Verdana, Arial, Helvetica, sans-serif;
+	color: #28417A;
+}
+.texto {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #28417A}
+.textwhite {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #FFFFFF}
+.sub {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #666666; background-color: #1BB38D; border-color: #AFE7DC #AFE7DC #2C9A82 #2C9A82; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.direc { font: bold 11px Verdana, Arial, Helvetica, sans-serif;}
+.gob {	font: 11px Verdana, Arial, Helvetica, sans-serif;}
+.buttom2 { font: bold 10px Verdana, Arial, Helvetica, sans-serif; color: #0F68B0; background: #FFFFFF; border-top: 2px solid #C9E3FA; border-right: 2px solid #0F68B0; border-bottom: 2px solid #0F68B0; border-left: 2px solid #C9E3FA; cursor: hand;}
+.area {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	border: 1px solid #28417A;
+	width: 70px;
+}
+
+.error {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #009933;
+	text-align: left;
+	margin-left: 50px;
+

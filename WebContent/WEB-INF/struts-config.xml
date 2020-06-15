@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+
+<struts-config>
+<!--   
+  <data-sources>
+    <data-source key="dataSource" type="org.apache.commons.dbcp.BasicDataSource">
+      <set-property property="driverClassName" value="com.ibm.db2.jcc.DB2Driver" />
+      <set-property property="url" value="jdbc:db2://dbserver.ed.gba.gov.ar:50000/ccheques" />
+      <set-property property="username" value="dgeupd" />
+      <set-property property="password" value="upddge" />
+      <set-property property="maxActive" value="10" />
+      <set-property property="maxWait" value="5000" />
+      <set-property property="defaultAutoCommit" value="false" />
+      <set-property property="defaultReadOnly" value="false" />
+     </data-source>
+  </data-sources>
+-->
+  
+  <form-beans>
+      <form-bean name="indexForm" type="forms.IndexForm">
+      </form-bean>
+      <form-bean name="consultaHaberesP001Form" type="forms.ConsultaHaberesP001Form">
+      </form-bean>
+      <form-bean name="consultaHaberesP002Form" type="forms.ConsultaHaberesP002Form">
+      </form-bean>
+      <form-bean name="consultaHaberesP003Form" type="forms.ConsultaHaberesP003Form">
+      </form-bean>
+      <form-bean name="consultaHaberesP004Form" type="forms.ConsultaHaberesP004Form">
+      </form-bean>
+      <form-bean name="consultaHaberesP005Form" type="forms.ConsultaHaberesP005Form">
+      </form-bean>
+      <form-bean name="consultaHaberesP006Form" type="forms.ConsultaHaberesP006Form">
+      </form-bean>
+      <form-bean name="expiredSessionForm" type="forms.ExpiredSessionForm">
+      </form-bean>
+  </form-beans> 
+   
+ <global-forwards>
+   <forward name="index" path="/jsps/index.jsp" redirect="true"/>
+   <forward name="consultaHaberesP001" path="/jsps/consultaHaberesP001.jsp" />
+   <forward name="consultaHaberesP002" path="/jsps/consultaHaberesP002.jsp" />
+   <forward name="consultaHaberesP003" path="/jsps/consultaHaberesP003.jsp" redirect="true"/>
+   <forward name="consultaHaberesP004" path="/jsps/consultaHaberesP004.jsp" redirect="true"/>
+   <forward name="consultaHaberesP005" path="/jsps/consultaHaberesP005.jsp" redirect="true"/>
+   <forward name="consultaHaberesP006" path="/jsps/consultaHaberesP006.jsp" redirect="true"/>
+   <forward name="expiredSession" path="/jsps/expiredSession.jsp" redirect="true"/>
+ </global-forwards>
+  
+    
+  <action-mappings>
+    <action 
+             path="/index" 
+             type="controller.IndexAction" 
+             scope="request"
+             validate="true"
+             input="/jsps/index.jsp"
+             name="indexForm" />
+
+    <action 
+             path="/consultaHaberesP001" 
+             type="controller.ConsultaHaberesP001Action" 
+             scope="request"
+             validate="true"
+             input="/jsps/consultaHaberesP001.jsp"
+             name="consultaHaberesP001Form" />
+
+    <action 
+             path="/consultaHaberesP002" 
+             type="controller.ConsultaHaberesP002Action" 
+             scope="request"
+             validate="true"
+             input="/jsps/consultaHaberesP002.jsp"
+             name="consultaHaberesP002Form" />
+
+    <action 
+             path="/consultaHaberesP003" 
+             type="controller.ConsultaHaberesP003Action" 
+             scope="request"
+             validate="true"
+             input="/jsps/consultaHaberesP003.jsp"
+             name="consultaHaberesP003Form" />
+
+    <action 
+             path="/consultaHaberesP004" 
+             type="controller.ConsultaHaberesP004Action" 
+             scope="request"
+             validate="true"
+             input="/jsps/consultaHaberesP004.jsp"
+             name="consultaHaberesP004Form" />
+             
+    <action 
+             path="/consultaHaberesP005" 
+             type="controller.ConsultaHaberesP005Action" 
+             scope="request"
+             validate="true"
+             input="/jsps/consultaHaberesP005.jsp"
+             name="consultaHaberesP005Form" /> 
+             
+    <action 
+             path="/consultaHaberesP006" 
+             type="controller.ConsultaHaberesP006Action" 
+             scope="request"
+             validate="true"
+             input="/jsps/consultaHaberesP006.jsp"
+             name="consultaHaberesP006Form" />         
+             
+    <action  
+             path="/expiredSession"  
+             type="controller.ExpiredSessionAction"  
+             scope="request"
+             validate="true"
+             input="/jsps/expiredSession.jsp"
+             name="expiredSessionForm"  />
+             
+  </action-mappings>
+
+   <controller 
+     contentType="text/html;charset=ISO-8859-1"
+     debug="3"
+     locale="true"
+     nocache="true"
+     processorClass="controller.CustomRequestProcessor" />
+
+
+  <message-resources parameter="resources.ApplicationResources"/>
+
+</struts-config>
+

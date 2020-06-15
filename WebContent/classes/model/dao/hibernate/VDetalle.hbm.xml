@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping 	package="model">
+
+	<class name="VDetalle" table="v_detalles" discriminator-value="N">
+	    
+        <composite-id>     
+          <key-property name="liqid" column="liqid" ></key-property> 
+          <key-property name="codigo" column="codigo" ></key-property>  
+          <key-property name="bod" column="bod" ></key-property>  
+          <key-property name="clave" column="clave" ></key-property>  
+        </composite-id> 
+ 
+ 		<property name="origen"> <column name="origen"/> </property>
+		<property name="pesos"> <column name="pesos"/> </property>
+		<property name="pesossubv"> <column name="pesossubv" not-null="true"/> </property>
+		<property name="descripcioncodigo"> <column name="descripcion_codigo" not-null="true"/> </property>
+		<property name="imputa"> <column name="imputa" not-null="true"/> </property>
+
+    </class>
+</hibernate-mapping>

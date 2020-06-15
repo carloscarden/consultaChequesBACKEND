@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!--
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	-->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">	
+	
+	
+	
+
+<hibernate-configuration>
+<session-factory>
+
+		  <property name="connection.datasource">java:comp/env/jdbc/consultaChequesV2</property>
+      <property name="dialect">org.hibernate.dialect.DB2Dialect</property>
+<!-- Mapping files -->
+<mapping resource="model/dao/hibernate/Pers.hbm.xml"/>
+<mapping resource="model/dao/hibernate/Reg.hbm.xml"/>
+<mapping resource="model/dao/hibernate/Rev.hbm.xml"/>
+<mapping resource="model/dao/hibernate/Cat.hbm.xml"/>
+<mapping resource="model/dao/hibernate/Dep.hbm.xml"/>
+<mapping resource="model/dao/hibernate/Distrito.hbm.xml"/>
+<mapping resource="model/dao/hibernate/Estab.hbm.xml"/>
+<mapping resource="model/dao/hibernate/Org.hbm.xml"/>
+<mapping resource="model/dao/hibernate/Ecargo.hbm.xml"/>
+<mapping resource="model/dao/hibernate/VDetalle.hbm.xml"/>
+<mapping resource="model/dao/hibernate/VEDetalle.hbm.xml"/>
+<mapping resource="model/dao/hibernate/VInfoCheq.hbm.xml"/>
+<mapping resource="model/dao/hibernate/VEInfoCheq.hbm.xml"/>
+<mapping resource="model/dao/hibernate/CambDoc.hbm.xml"/>
+<mapping resource="model/dao/hibernate/LogConsultaCheques.hbm.xml"/>
+
+</session-factory>
+</hibernate-configuration>

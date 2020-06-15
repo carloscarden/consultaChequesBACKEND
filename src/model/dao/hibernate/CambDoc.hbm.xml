@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping 	package="model">
+
+	<class name="CambDoc" table="cambdoc" discriminator-value="N">
+	    
+	    <id name="idcambdoc" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+ 
+ 		<property name="docunew"> <column name="docunew" not-null="true"/> </property>
+		<property name="secunew"> <column name="secunew" not-null="true"/> </property>
+		<property name="docuold"> <column name="docuold" not-null="true"/> </property>
+		<property name="secuold"> <column name="secuold" not-null="true"/> </property>
+		<property name="esdeno"> <column name="es_deno" not-null="true"/> </property>
+		<property name="idant"> <column name="idant" not-null="true"/> </property>
+		<property name="idsig"> <column name="idsig" not-null="true"/> </property>
+		<property name="vigh"> <column name="vigh" not-null="true"/> </property>
+		<property name="vigd"> <column name="vigd" not-null="true"/> </property>
+		
+		
+    </class>
+</hibernate-mapping>

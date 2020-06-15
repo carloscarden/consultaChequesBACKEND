@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping 	package="model">
+
+	<class name="VInfoCheq" table="v_infocheq" discriminator-value="N">
+	    
+        <composite-id>     
+          <key-property name="pin" column="pin" ></key-property> 
+          <key-property name="secu" column="secu" ></key-property>  
+          <key-property name="esDeno" column="es_deno" ></key-property>  
+          <key-property name="opid" column="opid" ></key-property>  
+          <key-property name="fecAfec" column="fec_afec" ></key-property>  
+          <key-property name="liqid" column="liqid" ></key-property>
+		  <key-property name="nroCheq" column="nrocheq" ></key-property>
+        </composite-id> 
+ 
+ 		<property name="vigdPers"> <column name="vigd_pers"/> </property>
+ 		<property name="vighPers"> <column name="vigh_pers"/> </property>
+		<property name="docu"> <column name="docu"  not-null="true"/> </property>
+		<property name="nombrePers"> <column name="nombre_pers"/> </property>
+		<property name="sexo"> <column name="sexo"/> </property>
+        <property name="vigdCar"> <column name="vigd_car"/> </property>
+        <property name="vighCar"> <column name="vigh_car"/> </property>
+        
+                
+        <many-to-one name="rev" class="model.Rev" column="rev" not-null="true" lazy="false"/>
+        <many-to-one name="reg" class="model.Reg" column="reg" not-null="true" lazy="false"/>
+           
+        <many-to-one name="cat" class="model.Cat" insert="false" update="false" lazy="false">
+           <column name="cat" not-null="true"/>
+           <column name="es_deno" not-null="true"/>
+        </many-to-one>
+               
+        <property name="hs"> <column name="hs"/> </property>
+        <property name="dobEscolCargo"> <column name="dob_escol_cargo"/> </property>
+        <property name="sit"> <column name="sit"/> </property>
+        
+        
+        <property name="item"> <column name="item"/> </property>
+        <property name="apart"> <column name="apart"/> </property>
+        <property name="codMov"> <column name="cod_mov"/> </property>
+        <property name="fcion"> <column name="fcion"/> </property>
+        <property name="convenio"> <column name="convenio"/> </property>
+        <property name="garantia"> <column name="garantia"/> </property>
+        <property name="movilidad"> <column name="movilidad"/> </property>
+        <property name="presentismo"> <column name="presentismo"/> </property>
+        <property name="escuid"> <column name="escuid"/> </property>           
+        <property name="vigdEstab"> <column name="vigd_estab"/> </property>           
+        <property name="vighEstab"> <column name="vigh_estab"/> </property>           
+        <property name="distrito"> <column name="distrito" not-null="true"/> </property>           
+                
+        <many-to-one name="dependencia" class="model.Dep" column="dependencia" not-null="true" lazy="false"/>
+        <many-to-one name="tipoOrg" class="model.Org" column="tipo_org" not-null="true" lazy="false"/>
+               
+        <property name="numero"> <column name="numero"/> </property>           
+        <property name="nombreEstab"> <column name="nombre_estab"/> </property>           
+        <property name="ccticas"> <column name="ccticas"/> </property>           
+        <property name="rural"> <column name="rural"/> </property>           
+        <property name="secciones"> <column name="secciones"/> </property>           
+        <property name="turnos"> <column name="turnos"/> </property>           
+        <property name="subvencion"> <column name="subvencion"/> </property>           
+        <property name="dobEscolEstab"> <column name="dob_escol_estab"/> </property>           
+        <property name="nombreDistrito"> <column name="nombre_distrito"/> </property>           
+        <property name="tipoCheque"> <column name="tipo_cheque"/> </property>           
+<!--         <property name="nroCheq"> <column name="nrocheq"/> </property>  -->           
+        <property name="antig"> <column name="antig"/> </property>           
+        <property name="emitirCheq"> <column name="emitir_cheq"/> </property>           
+        <property name="liquido"> <column name="liquido"/> </property>           
+        <property name="observacionesCheque"> <column name="observaciones_cheque"/> </property>           
+        <property name="escuidCheque"> <column name="escuid_cheque"/> </property>           
+        <property name="nombreOpago"> <column name="nombre_opago"/> </property>           
+        <property name="vencimiento"> <column name="vencimiento"/> </property>           
+        <property name="origen"> <column name="origen"/> </property>           
+        <property name="tipoOpago"> <column name="tipo_opago"/> </property>           
+        <property name="cajero"> <column name="cajero"/> </property>           
+        <property name="vigOpago"> <column name="vig_opago"/> </property>           
+        <property name="moneda"> <column name="moneda"/> </property>           
+        <property name="muestra"> <column name="muestra"/> </property>           
+        <property name="caracRevOpago"> <column name="carac_rev_opago"/> </property>           
+        <property name="perOpago"> <column name="per_opago"/> </property>           
+        <property name="opidIps"> <column name="opid_ips"/> </property>           
+        <property name="opidIoma"> <column name="opid_ioma"/> </property>     
+              
+        <property name="vigdInt"> <column name="vigd_int"/> </property>           
+        <property name="vighInt"> <column name="vigh_int"/> </property>           
+        <property name="escuidInt"> <column name="escuid_int"/> </property>           
+        
+        <property name="catInt"> <column name="cat_int"/> </property>           
+        
+        <property name="hsInt"> <column name="hs_int"/> </property>           
+        <property name="dobEscolInt"> <column name="dob_escol_int"/> </property>           
+        <property name="itemInt"> <column name="item_int"/> </property>           
+        <property name="apartInt"> <column name="apart_int"/> </property>           
+        <property name="codMovInt"> <column name="cod_mov_int"/> </property>           
+        <property name="movInt"> <column name="mov_int"/> </property>           
+        <property name="vigdEstabInt"> <column name="vigd_estab_int"/> </property>           
+        <property name="vighEstabInt"> <column name="vigh_estab_int"/> </property>           
+        <property name="distritoInt"> <column name="distrito_int"/> </property>           
+        
+        <property name="dependenciaInt"> <column name="dependencia_int"/> </property>           
+        <property name="tipoOrgInt"> <column name="tipo_org_int"/> </property>           
+          
+        <property name="numeroInt"> <column name="numero_int"/> </property>           
+        <property name="nombreEstabInt"> <column name="nombre_estab_int"/> </property>           
+        <property name="ccticasInt"> <column name="ccticas_int"/> </property>           
+        <property name="ruralInt"> <column name="rural_int"/> </property>           
+        <property name="seccionesInt"> <column name="secciones_int"/> </property>           
+        <property name="turnosInt"> <column name="turnos_int"/> </property>           
+        <property name="subvencionInt"> <column name="subvencion_int"/> </property>           
+        <property name="dobEscolEstabInt"> <column name="dob_escol_estab_int"/> </property>           
+        <property name="escuidEscart"> <column name="escuid_escart"/> </property>           
+        <property name="nomDistInt"> <column name="nom_dist_int"/> </property>           
+        <property name="fpago"> <column name="fpago"/> </property>           
+
+    </class>
+</hibernate-mapping>

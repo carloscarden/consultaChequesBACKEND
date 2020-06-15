@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping	package="model">
+
+	<class name="Distrito" table="distrito"
+		discriminator-value="N">
+		<id name="distrito" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+        <property name="descripcion"> <column name="descripcion"/> </property>
+        <property name="region"> <column name="region"/> </property> 
+        <property name="area"> <column name="area"/> </property>
+
+    </class>
+</hibernate-mapping>

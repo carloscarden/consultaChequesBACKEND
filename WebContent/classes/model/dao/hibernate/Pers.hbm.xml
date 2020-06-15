@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping 	package="model">	
+	<class name="Pers" table="pers" discriminator-value="N">
+  
+        <id name="pin" column="pin">
+			<generator class="native"/>
+		</id>
+
+	    <property name="vigd"> <column name="vigd"/> </property>	    	    
+	    <property name="vigh"> <column name="vigh"/> </property>	    
+        <property name="docu"> <column name="docu" not-null="true"/> </property>
+        <property name="nombre"> <column name="nombre"/> </property>
+        <property name="alta"> <column name="alta"/> </property>
+        <property name="sexo"> <column name="sexo"/> </property>
+        
+    </class>
+</hibernate-mapping>
